@@ -83,18 +83,13 @@ function finalScore(cb, innings){
 
   let score1 = 0;
   let score2 = 0;
-  let homeTeam = [];
-  let awayTeam = [];
+ 
     for (let i = 0; i < innings; i++) {
       score1 = score1 + cb();
       score2 = score2 + cb();
-      homeTeam.push(score1);
-      awayTeam.push(score2);
+      console.log(`Inning: ${i + 1} Home: ${score1} Away: ${score2}`)
     };
-     for (let i = 0; i < innings; i++) {
-      
-       
-    };
+   
   
   return {"home": score1, "away": score2};
 
@@ -123,8 +118,27 @@ and returns the score at each pont in the game, like so:
 9th inning: awayTeam - homeTeam
 
 Final Score: awayTeam - homeTeam */
+function getInningScore(cb, innings) {
+  
 
-function scoreboard(getInningScore, inning, numOfInnings) {
+    let score1 = 0;
+    let score2 = 0;
+   
+      for (let i = 0; i < innings; i++) {
+        score1 = score1 + cb();
+        score2 = score2 + cb();
+      };
+     
+    
+    return `Inning: ${i + 1} Home: ${score1} Away: ${score2}`;
+  
+}
+  
+  console.log(getInningScore(inning, 9));
+
+
+
+function scoreboard(inningScore, inning, numOfInnings) {
   for(let i = 0; i < numOfInnings, i++) {
 
   }

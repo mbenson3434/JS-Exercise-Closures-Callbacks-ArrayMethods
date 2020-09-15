@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks until your tests are passing.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure is when inner scope references a variable from outer scope.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +64,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure is used to pull name from the outer function to the inner function. You can tell because name is getting fed in to the outer function as an argument. 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+There is no count or any reason that dansRoll() wouldn't just reset with a new roll each time. 
 c. What is the lexical scope of `newRoll`? 
+newRoll can only be used withing the inner function. 
 
 ### Task 3 - Stretch Goals
 
